@@ -1,0 +1,26 @@
+<%- include('header'); -%>
+<body>
+    <div class="heading">
+        <h1 class="head-line">To Do List</h1>
+    </div>
+    <h1 class="day-type"><%= listTitle %></h1>
+
+    <div class="list-items">
+        <ul>
+            <% for(var i = 0; i < newListItems.length; i++){ %>
+                <li><%= newListItems[i] %></li>
+            <% } %>
+            
+            
+        </ul>
+        <form action="/" method="post">
+            <input type="text" name = "newItem">
+            <button type="submit" name="list" value= <%= listTitle %>>Add</button>
+    
+        </form>
+    </div>
+    
+    
+</body>
+
+<%- include('footer'); -%>
